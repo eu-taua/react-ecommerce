@@ -11,7 +11,7 @@ export const Slider = () => {
           SUMMER <br /> COLECTION
         </h1>
         <p>Separamos os melhores looks para você neste 2019</p>
-        <div className="button-wrapper">
+        <div className="custom-button">
           <button>SHOP NOW</button>
         </div>
       </div>
