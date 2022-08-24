@@ -1,0 +1,59 @@
+.grid-container {
+  max-height: 720px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 30px;
+
+  > * {
+    height: 720px;
+  }
+
+  .grid-in {
+    display: grid;
+    row-gap: 30px;
+
+    > * {
+      height: 345px;
+    }
+  }
+
+  .women-category,
+  .men-category,
+  .jewellery-category {
+    width: 100%;
+
+    display: flex;
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    div {
+      font-size: 14px;
+      font-family: "Montserrat";
+
+      position: absolute;
+      left: 50px;
+      top: 50px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      p {
+        font-weight: 400;
+      }
+
+      a {
+        color: var(--gray);
+
+        font-weight: 500;
+      }
+    }
+  }
+}
