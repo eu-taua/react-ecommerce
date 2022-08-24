@@ -9,6 +9,6 @@ footer {
   background-color: var(--light-gray);
 
   > * {
-    width: 80%;
+    width: var(--page-width);
   }
 }
