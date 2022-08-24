@@ -3,6 +3,7 @@
   --gray: #333333;
 
   --page-width: 80%;
+  --max-width: 1600px;
 }
 
 * {
@@ -33,11 +34,6 @@ body {
 }
 
 #root {
-  max-width: 1600px;
-  width: 100%;
-}
-
-.App {
   width: 100%;
 }
 

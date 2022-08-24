@@ -10,5 +10,6 @@ footer {
 
   > * {
     width: var(--page-width);
+    max-width: var(--max-width);
   }
 }
