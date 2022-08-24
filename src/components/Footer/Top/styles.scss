@@ -13,23 +13,31 @@ footer {
     .signup-news {
       display: flex;
       flex-direction: column;
-      display: flex;
       gap: 30px;
+      text-align: end;
+
+      min-width: 500px;
 
       .buton-input {
         position: relative;
+        display: flex;
+        justify-content: flex-end;
 
         input {
-          width: 100%;
-          outline: none;
+          width: 70%;
           height: 50px;
+
           font-size: large;
+          outline: none;
+
+          border: 0.5px solid #777777;
+          padding-left: 10px;
         }
         button {
           all: unset;
           position: absolute;
-          right: 0px;
-          top: 15px;
+          right: 10px;
+          top: 10px;
           z-index: 2;
           border: none;
           height: 30px;
