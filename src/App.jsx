@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Footer } from "./components/Footer"
+import { Header } from "./components/Header"
 import { useHttp } from "./hooks/useHttp"
 import "./styles/global.scss"
 function App() {
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hi, there!</h1>
+      <Header prodAmount={0} totalValue={0} />
+      <h1>BODY</h1>
       <Footer />
     </div>
   )

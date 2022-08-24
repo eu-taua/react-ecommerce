@@ -1,0 +1,17 @@
+header {
+  .bottom {
+    margin-top: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    nav {
+      display: flex;
+      gap: 60px;
+
+      .red {
+        color: red;
+      }
+    }
+  }
+}
