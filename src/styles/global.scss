@@ -1,6 +1,7 @@
 :root {
   --light-gray: #fafafa;
-  --gray: #333333;
+  --dark-gray: #333333;
+  --gray: #777777;
 
   --page-width: 80%;
   --max-width: 1600px;
@@ -24,7 +25,7 @@ p,
 span,
 button,
 a {
-  color: var(--gray);
+  color: var(--dark-gray);
 }
 
 body {
@@ -44,4 +45,18 @@ body {
 a {
   all: unset;
   cursor: pointer;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.center {
+  top: 50%;
 }
