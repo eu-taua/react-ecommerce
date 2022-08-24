@@ -7,6 +7,39 @@
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button,
+a {
+  color: var(--gray);
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   overflow-x: hidden;
+  width: auto;
+}
+
+#root {
+  max-width: 1600px;
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
 }
