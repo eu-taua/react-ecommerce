@@ -25,7 +25,7 @@ function App() {
       <Header prodAmount={0} totalValue={0} />
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home products={products} />} />
+          <Route path="/" element={<Home products={products} />} />
         </Routes>
       </BrowserRouter>
       <Footer />
