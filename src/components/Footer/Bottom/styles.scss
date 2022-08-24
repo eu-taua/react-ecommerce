@@ -1,0 +1,19 @@
+footer {
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 0;
+    border-top: 1px solid #ccc;
+
+    .menu {
+      display: flex;
+      gap: 50px;
+    }
+    .social {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
