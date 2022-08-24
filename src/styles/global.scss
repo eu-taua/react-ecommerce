@@ -31,22 +31,21 @@ a {
 body {
   overflow-x: hidden;
 }
-
 #root {
-  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .App {
-  width: 100%;
+  padding-top: 50px;
+
   max-width: var(--max-width);
+  width: 100%;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 a {
