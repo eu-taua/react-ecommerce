@@ -2,7 +2,7 @@ import { GiPhone } from "react-icons/gi"
 import { BsBag } from "react-icons/bs"
 
 import "./styles.scss"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export const Header = ({ phone = "11 4191 4399", prodAmount, totalValue }) => {
   const navLinks = [
@@ -35,9 +35,15 @@ export const Header = ({ phone = "11 4191 4399", prodAmount, totalValue }) => {
     return (
       <nav className="header-nav">
         {navLinks.map(({ to, name }) => (
-          <Link key={name} to={to}>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { fontWeight: 700 } : undefined | (name === "OUTLET") ? { color: "red" } : undefined
+            }
+            key={name}
+            to={to}
+          >
             {name}
-          </Link>
+          </NavLink>
         ))}
       </nav>
     )
