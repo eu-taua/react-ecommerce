@@ -31,20 +31,20 @@ function App() {
       exact: true,
     },
     {
-      path: "/category",
+      path: "/category/:category",
       name: "Category page",
       element: <Category />,
       exact: true,
     },
     {
-      path: "/product",
+      path: "/product/:id",
       name: "Product page",
       element: <Product />,
       exact: true,
     },
   ]
 
-  function Navigation() {
+  const NavRoutes = () => {
     return (
       <Routes>
         {routes.map(({ name, ...rest }) => (
@@ -57,9 +57,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header prodAmount={0} totalValue={0} />
       <BrowserRouter>
-        <Navigation />
+        <Header prodAmount={0} totalValue={0} />
+        <NavRoutes />
       </BrowserRouter>
       <Footer />
     </div>
