@@ -17,7 +17,7 @@ export const Home = ({ products }) => {
           <div className="products-wrapper">
             {products &&
               products.map(prod => {
-                return <ProductCard product={prod} />
+                return <ProductCard key={prod.id} product={prod} />
               })}
           </div>
         </section>
