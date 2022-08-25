@@ -1,5 +1,6 @@
 header {
   display: flex;
+  gap: 60px;
   flex-direction: column;
   align-items: center;
   align-self: center;
@@ -38,5 +39,9 @@ header {
   .header-nav {
     display: flex;
     gap: 60px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
   }
 }
