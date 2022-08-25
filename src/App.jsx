@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
 import { useHttp } from "./hooks/useHttp"
-import { Home } from "./pages/home"
+import { Home } from "./pages/Home"
+import { Category } from "./pages/Category"
+import { Product } from "./pages/Product"
 import "./styles/global.scss"
 function App() {
   const [products, setProducts] = useState([])
@@ -20,13 +22,43 @@ function App() {
     fetchProducts()
   }, [])
 
+  const routes = [
+    {
+      path: "/home",
+      name: "Home Page",
+      element: <Home products={products} />,
+      props: products,
+      exact: false,
+    },
+    {
+      path: "/category",
+      name: "Category page",
+      element: <Category />,
+      exact: false,
+    },
+    {
+      path: "/product",
+      name: "Product page",
+      element: <Product />,
+      exact: false,
+    },
+  ]
+
+  function Navigation() {
+    return (
+      <Routes>
+        {routes.map(({ name, ...rest }) => (
+          <Route key={name} {...rest} />
+        ))}
+      </Routes>
+    )
+  }
+
   return (
     <div className="App">
       <Header prodAmount={0} totalValue={0} />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home products={products} />} />
-        </Routes>
+        <Navigation />
       </BrowserRouter>
       <Footer />
     </div>
