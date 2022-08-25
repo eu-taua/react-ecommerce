@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+import { useHttp } from "./hooks/useHttp"
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
-import { useHttp } from "./hooks/useHttp"
 import { Home } from "./pages/Home"
 import { Category } from "./pages/Category"
 import { Product } from "./pages/Product"
@@ -28,19 +28,19 @@ function App() {
       name: "Home Page",
       element: <Home products={products} />,
       props: products,
-      exact: false,
+      exact: true,
     },
     {
       path: "/category",
       name: "Category page",
       element: <Category />,
-      exact: false,
+      exact: true,
     },
     {
       path: "/product",
       name: "Product page",
       element: <Product />,
-      exact: false,
+      exact: true,
     },
   ]
 
@@ -50,6 +50,7 @@ function App() {
         {routes.map(({ name, ...rest }) => (
           <Route key={name} {...rest} />
         ))}
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     )
   }
