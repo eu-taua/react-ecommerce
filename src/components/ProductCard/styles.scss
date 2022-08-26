@@ -1,9 +1,8 @@
 .product-wrapper {
-  max-width: 240px;
-
   text-align: start;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   .description {
     display: flex;
