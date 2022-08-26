@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react"
+import { useHttp } from "../../hooks/useHttp"
 import { Grid } from "../../components/Grid"
 import { ProductCard } from "../../components/ProductCard"
 import { Slider } from "../../components/Slider"
 import "./styles.scss"
 
-export const Home = ({ products }) => {
+export const Home = () => {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setProducts(
+        await useHttp(
+          //had to add a proxy at request, the api at heroku hasn't CORS enabled.
+          "https://vast-plateau-19026.herokuapp.com/https://bob-teste-front-end.herokuapp.com/api/products.json"
+        )
+      )
+    }
+    fetchProducts()
+  }, [])
+
   return (
     <div className="home-container">
       <Slider />
