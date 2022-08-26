@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from "react-router-dom"
 import { useHttp } from "./hooks/useHttp"
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
@@ -57,10 +57,10 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Header prodAmount={0} totalValue={0} />
         <NavRoutes />
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </div>
   )
