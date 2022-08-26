@@ -1,0 +1,27 @@
+.pagination-wrapper {
+  margin: 100px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    li {
+      all: unset;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+    .selected {
+      color: white;
+      background-color: black;
+    }
+  }
+  button {
+    all: unset;
+    cursor: pointer;
+
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+
+    font-size: 19px;
+  }
+}
