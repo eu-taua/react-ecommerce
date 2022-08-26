@@ -1,9 +1,11 @@
 import { Grid } from "../../components/Grid"
 import { Slider } from "../../components/Slider"
-import "./styles.scss"
 import { ProductList } from "../../components/ProductList"
+import useProducts from "../../hooks/useProducts"
+import "./styles.scss"
 
-export const Home = ({ products }) => {
+export const Home = () => {
+  const { products } = useProducts()
   return (
     <div className="home-container">
       <Slider />

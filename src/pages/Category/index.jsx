@@ -1,10 +1,12 @@
-import "./styles.scss"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 import { ProductList } from "../../components/ProductList"
 import { Pagination } from "../../components/Pagination"
+import useProducts from "../../hooks/useProducts"
+import "./styles.scss"
 
-export const Category = ({ products }) => {
+export const Category = () => {
+  const { products } = useProducts()
   const { category } = useParams()
 
   const [selector, setSelector] = useState("FEMININO")
