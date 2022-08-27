@@ -1,3 +1,5 @@
+@import "src/styles/breakpoints.scss";
+
 header {
   display: flex;
   flex-direction: column;
@@ -17,6 +19,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include large {
+      flex-direction: column;
+      gap: 30px;
+    }
 
     .phone {
       display: flex;
@@ -40,10 +47,15 @@ header {
   }
   .header-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 60px;
 
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 24px;
+
+    @include large {
+      justify-content: center;
+    }
   }
 }

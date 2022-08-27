@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <HashRouter>
         <ProductsProvider>
-          {/* <Header prodAmount={0} totalValue={0} /> */}
+          <Header prodAmount={0} totalValue={0} />
           <NavRoutes />
-          {/* <Footer /> */}
+          <Footer />
         </ProductsProvider>
       </HashRouter>
     </div>
