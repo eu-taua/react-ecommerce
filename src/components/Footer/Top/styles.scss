@@ -1,9 +1,16 @@
+@import "/src/styles/breakpoints.scss";
+
 footer {
   .top {
     margin-top: 50px;
 
     display: flex;
     justify-content: space-between;
+
+    @include large {
+      flex-direction: column;
+      gap: 30px;
+    }
 
     .widget {
       display: flex;
@@ -17,6 +24,10 @@ footer {
       text-align: end;
 
       min-width: 500px;
+
+      @include medium {
+        min-width: 0;
+      }
 
       .buton-input {
         position: relative;

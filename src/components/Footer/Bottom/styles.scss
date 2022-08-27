@@ -1,3 +1,5 @@
+@import "/src/styles/breakpoints.scss";
+
 footer {
   .bottom {
     display: flex;
@@ -6,6 +8,11 @@ footer {
 
     padding: 50px 0;
     border-top: 1px solid #ccc;
+
+    @include large {
+      flex-direction: column;
+      gap: 30px;
+    }
 
     .menu {
       display: flex;
