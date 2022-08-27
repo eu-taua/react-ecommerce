@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import "./styles.scss"
 
-export const ProductCard = ({ product }) => {
+export const SmallProductCard = ({ product }) => {
   const navigate = useNavigate()
   return (
     <div className="product-wrapper" onClick={() => navigate(`/product/${product.id}`)}>
