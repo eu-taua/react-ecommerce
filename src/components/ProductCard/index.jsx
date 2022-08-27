@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { ProductOptions } from "../ProductOptions"
+import "./styles.scss"
 
 export const ProductCard = ({ product }) => {
   const [selectedOptions, setSelectedOptions] = useState({ color: "red", size: "M", amount: 1 })
