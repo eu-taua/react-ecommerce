@@ -11,6 +11,8 @@ export const Category = () => {
 
   const [selector, setSelector] = useState("FEMININO")
 
+  const selectorsOptions = ["FEMININO", "MASCULINO", "ACESSÓRIOS"]
+
   return (
     <div className="container">
       <div className="title-bar-wrapper">
@@ -24,24 +26,15 @@ export const Category = () => {
 
       <main>
         <nav className="categories">
-          <button
-            className={selector === "FEMININO" ? "selected" : ""}
-            onClick={e => setSelector(e.target.textContent)}
-          >
-            FEMININO
-          </button>
-          <button
-            className={selector === "MASCULINO" ? "selected" : ""}
-            onClick={e => setSelector(e.target.textContent)}
-          >
-            MASCULINO
-          </button>
-          <button
-            className={selector === "ACESSÓRIOS" ? "selected" : ""}
-            onClick={e => setSelector(e.target.textContent)}
-          >
-            ACESSÓRIOS
-          </button>
+          {selectorsOptions.map(sel => (
+            <button
+              key={sel}
+              className={selector === `${sel}` ? "selected" : ""}
+              onClick={e => setSelector(e.target.textContent)}
+            >
+              {sel}
+            </button>
+          ))}
         </nav>
 
         <div className="show-models">
