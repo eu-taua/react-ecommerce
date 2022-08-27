@@ -13,9 +13,9 @@ function App() {
         <ProductsProvider>
           <Header prodAmount={0} totalValue={0} />
           <NavRoutes />
+          <Footer />
         </ProductsProvider>
       </HashRouter>
-      <Footer />
     </div>
   )
 }
