@@ -1,6 +1,12 @@
+@import "src/styles/breakpoints.scss";
+
 .products-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+
+  @include xlarge {
+    justify-content: center;
+  }
 }
