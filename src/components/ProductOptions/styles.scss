@@ -1,0 +1,47 @@
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h4 {
+    margin-bottom: 20px;
+    span {
+      color: red;
+    }
+  }
+
+  //
+  .product-colors {
+    display: flex;
+    flex-direction: column;
+
+    .colors-wrapper {
+      display: flex;
+      gap: 8px;
+      .color {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .product-sizes {
+    margin-bottom: 50px;
+    .sizes-wrapper {
+      display: flex;
+      gap: 10px;
+
+      .size {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 7px;
+
+        background-color: #efefef;
+
+        cursor: pointer;
+      }
+    }
+  }
+}

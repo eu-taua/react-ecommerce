@@ -1,3 +1,5 @@
+import "./styles.scss"
+
 export const ProductOptions = ({ selectedOptions, setSelectedOptions }) => {
   const productColors = ["blue", "red", "purple", "green"]
   const productSizes = ["P", "M", "G", "XG", "XXG"]
