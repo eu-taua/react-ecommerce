@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { ProductCard } from "../../components/ProductCard"
-import { ProductList } from "../../components/ProductList"
+import { SmallProductList } from "../../components/SmallProductList"
 import useProducts from "../../hooks/useProducts"
 import "./styles.scss"
 
@@ -20,7 +20,7 @@ export const Product = () => {
           <ProductCard product={product} />
           <div className="related-products">
             <h1>Produtos Relacionados</h1>
-            <ProductList products={related} />
+            <SmallProductList products={related} />
           </div>
         </main>
       </div>

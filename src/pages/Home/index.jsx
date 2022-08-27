@@ -1,6 +1,6 @@
 import { Grid } from "../../components/Grid"
 import { Slider } from "../../components/Slider"
-import { ProductList } from "../../components/ProductList"
+import { SmallProductList } from "../../components/SmallProductList"
 import useProducts from "../../hooks/useProducts"
 import "./styles.scss"
 
@@ -16,7 +16,7 @@ export const Home = () => {
         </section>
         <section className="popular">
           <h1>POPULARES</h1>
-          <ProductList products={products} />
+          <SmallProductList products={products} />
         </section>
         <div className="custom-button">
           <button>VER MAIS PRODUTOS</button>

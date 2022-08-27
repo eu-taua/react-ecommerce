@@ -1,7 +1,7 @@
 import { SmallProductCard } from "../SmallProductCard"
 import "./styles.scss"
 
-export const ProductList = ({ products }) => {
+export const SmallProductList = ({ products }) => {
   return (
     <div className="products-wrapper">
       {products &&

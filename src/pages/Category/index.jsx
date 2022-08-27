@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useState } from "react"
-import { ProductList } from "../../components/ProductList"
+import { SmallProductList } from "../../components/SmallProductList"
 import { Pagination } from "../../components/Pagination"
 import useProducts from "../../hooks/useProducts"
 import "./styles.scss"
@@ -49,7 +49,7 @@ export const Category = () => {
           </p>
         </div>
 
-        <ProductList products={Array.from([...products, ...products])} />
+        <SmallProductList products={Array.from([...products, ...products])} />
         <Pagination />
       </main>
     </div>
